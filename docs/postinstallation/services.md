@@ -21,7 +21,7 @@ $ systemctl enable --now cups.service
 
 ## Tailscale
 
-Installer et démarrer TailScale :
+Installer et démarrer Tailscale :
 
 ```console
 $ pacman -S tailscale
