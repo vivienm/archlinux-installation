@@ -1,0 +1,40 @@
+site_name: Guide d'installation Arch Linux
+
+nav:
+- Accueil: index.md
+- Installation:
+  - installation/preinstallation.md
+  - installation/installation.md
+  - installation/configuration.md
+  - installation/reboot.md
+- Post-installation:
+  - postinstallation/boot.md
+  - postinstallation/adminsys.md
+  - postinstallation/optimization.md
+  - postinstallation/services.md
+  - postinstallation/gui.md
+
+markdown_extensions:
+- toc:
+    permalink: true
+- pymdownx.highlight
+- pymdownx.superfences
+
+theme:
+  name: material
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/lightbulb
+      name: Switch to light mode
+  features:
+  - navigation.tracking
+  - navigation.tabs
+  - toc.integrate
+  language: fr
