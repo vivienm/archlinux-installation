@@ -1,0 +1,763 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+    
+    
+      
+        <title>Configuration - Guide d'installation Arch Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a617204b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Guide d&#39;installation Arch Linux" class="md-header__button md-logo" aria-label="Guide d'installation Arch Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guide d'installation Arch Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Accueil
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../preinstallation/" class="md-tabs__link md-tabs__link--active">
+        Installation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../postinstallation/boot/" class="md-tabs__link">
+        Post-installation
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Guide d&#39;installation Arch Linux" class="md-nav__button md-logo" aria-label="Guide d'installation Arch Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Guide d'installation Arch Linux
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preinstallation/" class="md-nav__link">
+        Pré-installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fstab" class="md-nav__link">
+    Fstab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reseau" class="md-nav__link">
+    Réseau
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chroot" class="md-nav__link">
+    Chroot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuseau-horaire" class="md-nav__link">
+    Fuseau horaire
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langue" class="md-nav__link">
+    Langue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nom-dhote" class="md-nav__link">
+    Nom d'hôte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initramfs" class="md-nav__link">
+    Initramfs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mot-de-passe-root" class="md-nav__link">
+    Mot de passe root
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microcode" class="md-nav__link">
+    Microcode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestionnaire-de-demarrage" class="md-nav__link">
+    Gestionnaire de démarrage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reboot/" class="md-nav__link">
+        Redémarrage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Post-installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Post-installation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Post-installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postinstallation/boot/" class="md-nav__link">
+        Démarrage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postinstallation/adminsys/" class="md-nav__link">
+        Administration système
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postinstallation/optimization/" class="md-nav__link">
+        Optimisation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postinstallation/services/" class="md-nav__link">
+        Services système
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postinstallation/gui/" class="md-nav__link">
+        Interface graphique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
+<h2 id="fstab">Fstab<a class="headerlink" href="#fstab" title="Permanent link">&para;</a></h2>
+<p>Générer le fichier <code>fstab</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre></div>
+<p>Vérifier le fichier généré <code>/mnt/etc/fstab</code> et le corriger si nécessaire.
+Il devrait typiquement se présenter comme suit :</p>
+<div class="highlight"><pre><span></span><code># Static information about the filesystems.
+# See fstab(5) for details.
+
+# &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;
+# /dev/mapper/arch-root LABEL=ARCH_ROOT
+UUID=0c71a3c6-d4d1-48a5-9f41-93a31ff5c042       /               ext4            rw,relatime     0 1
+
+# /dev/nvme0n1p1 LABEL=ESP
+UUID=18CA-3DF1          /efi            vfat            rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro   0 2
+
+# /dev/nvme0n1p7 LABEL=BOOT
+UUID=DA04-34E3          /boot           vfat            rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro   0 2
+</code></pre></div>
+<h2 id="reseau">Réseau<a class="headerlink" href="#reseau" title="Permanent link">&para;</a></h2>
+<p>Copier les fichiers de configuration réseau :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>cp /etc/systemd/network/*.network /mnt/etc/systemd/network/
+<span class="gp">$ </span>ln -sf /run/systemd/resolve/stub-resolv.conf /mnt/etc/resolv.conf
+</code></pre></div>
+<h2 id="chroot">Chroot<a class="headerlink" href="#chroot" title="Permanent link">&para;</a></h2>
+<p>Ouvrir un shell chroot dans le système nouvellement installé :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>arch-chroot /mnt
+</code></pre></div>
+<h2 id="fuseau-horaire">Fuseau horaire<a class="headerlink" href="#fuseau-horaire" title="Permanent link">&para;</a></h2>
+<p>Définir le fuseau horaire :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
+</code></pre></div>
+<h2 id="langue">Langue<a class="headerlink" href="#langue" title="Permanent link">&para;</a></h2>
+<p>Éditer le fichier <code>/etc/locale.gen</code> et décommenter les locales <code>en_US.UTF-8</code> et <code>fr_FR.UTF-8</code>.
+Générer ensuite les locales :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>locale-gen
+</code></pre></div>
+<p>Créer le fichier <code>/etc/locale.conf</code> avec pour contenu</p>
+<div class="highlight"><pre><span></span><code><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+</code></pre></div>
+<p>Créer le fichier <code>/etc/vconsole.conf</code> avec pour contenu</p>
+<div class="highlight"><pre><span></span><code><span class="nv">KEYMAP</span><span class="o">=</span>fr-pc
+</code></pre></div>
+<h2 id="nom-dhote">Nom d'hôte<a class="headerlink" href="#nom-dhote" title="Permanent link">&para;</a></h2>
+<p>Entrer le nom de la machine (ne devant comporter que des lettres, des chiffres ou le tiret <code>-</code>, et commencer par une lettre) dans le fichier <code>/etc/hostname</code>.</p>
+<h2 id="initramfs">Initramfs<a class="headerlink" href="#initramfs" title="Permanent link">&para;</a></h2>
+<p>Dans le fichier <code>/etc/mkinitcpio.conf</code>, remplacer la ligne</p>
+<div class="highlight"><pre><span></span><code><span class="nv">HOOKS</span><span class="o">=(</span>base udev autodetect modconf block filesystems keyboard fsck<span class="o">)</span>
+</code></pre></div>
+<p>par</p>
+<div class="highlight"><pre><span></span><code><span class="nv">HOOKS</span><span class="o">=(</span>base systemd autodetect modconf block keyboard sd-vconsole sd-encrypt lvm2 filesystems fsck<span class="o">)</span>
+</code></pre></div>
+<p>Créer l'image initramfs :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>mkinitcpio -P
+</code></pre></div>
+<p>Ignorer les alertes concernant les firmwares.</p>
+<h2 id="mot-de-passe-root">Mot de passe root<a class="headerlink" href="#mot-de-passe-root" title="Permanent link">&para;</a></h2>
+<p>Définir un mot de passe pour le compte root :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>passwd
+</code></pre></div>
+<h2 id="microcode">Microcode<a class="headerlink" href="#microcode" title="Permanent link">&para;</a></h2>
+<p>En fonction du processeur, installer l'un des paquets <code>amd-ucode</code> ou <code>intel-ucode</code>.</p>
+<p>Il est possible de vérifier la nature du processeur avec la commande</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>cat /proc/cpuinfo <span class="p">|</span> grep vendor <span class="p">|</span> uniq
+</code></pre></div>
+<h2 id="gestionnaire-de-demarrage">Gestionnaire de démarrage<a class="headerlink" href="#gestionnaire-de-demarrage" title="Permanent link">&para;</a></h2>
+<p>Installer le gestionnaire de démarrage :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>bootctl --esp-path<span class="o">=</span>/efi --boot-path<span class="o">=</span>/boot install
+</code></pre></div>
+<p>Installer également un hook Pacman pour le mettre à jour automatiquement : créer le répertoire <code>/etc/pacman.d/hooks</code> puis le fichier <code>/etc/pacman.d/hooks/100-systemd-boot.hook</code> avec pour contenu</p>
+<div class="highlight"><pre><span></span><code><span class="k">[Trigger]</span>
+<span class="na">Type</span> <span class="o">=</span> <span class="s">Package</span>
+<span class="na">Operation</span> <span class="o">=</span> <span class="s">Upgrade</span>
+<span class="na">Target</span> <span class="o">=</span> <span class="s">systemd</span>
+
+<span class="k">[Action]</span>
+<span class="na">Description</span> <span class="o">=</span> <span class="s">Updating systemd-boot</span>
+<span class="na">When</span> <span class="o">=</span> <span class="s">PostTransaction</span>
+<span class="na">Exec</span> <span class="o">=</span> <span class="s">/usr/bin/bootctl --esp-path=/efi --boot-path=/boot update</span>
+</code></pre></div>
+<p>Éditer le fichier <code>/efi/loader/loader.conf</code> avec pour contenu</p>
+<div class="highlight"><pre><span></span><code>default  arch.conf
+timeout  4
+console-mode max
+editor   no
+</code></pre></div>
+<p>Obtenir l'UUID de la partition LUKS :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>blkid -l -t <span class="nv">LABEL</span><span class="o">=</span>ARCH
+</code></pre></div>
+<p>Créer le fichier <code>/boot/loader/entries/arch.conf</code> avec pour contenu</p>
+<div class="highlight"><pre><span></span><code>title   Arch Linux
+linux   /vmlinuz-linux
+initrd  /&lt;CPU&gt;-ucode.img
+initrd  /initramfs-linux.img
+options root=&quot;LABEL=ARCH_ROOT&quot; rw rd.luks.name=&lt;UUID&gt;=arch rd.luks.options=discard
+</code></pre></div>
+<p>en remplaçant</p>
+<ul>
+<li><code>&lt;UUID&gt;</code> par l'UUID de la partition LUKS.</li>
+<li><code>&lt;CPU&gt;</code> par <a href="#microcode">la nature du processeur</a> (<code>amd</code> ou <code>intel</code>).</li>
+</ul>
+<p>L'option <code>rd.luks.options=discard</code> doit être retirée si le système est installé sur un disque dur rotatif.
+Il est possible de vérifier la nature du disque avec la commande</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>lsblk -do PATH,ROTA
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page">
+      
+        
+        <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Installation" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              Installation
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../reboot/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Redémarrage" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              Redémarrage
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs", "toc.integrate"], "translations": {"clipboard.copy": "Copier dans le presse-papier", "clipboard.copied": "Copi\u00e9 dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "search": "../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      
+    
+  </body>
+</html>
