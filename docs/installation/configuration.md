@@ -100,7 +100,7 @@ Ignorer les alertes concernant les firmwares.
 
 ## Mot de passe root
 
-Définir un mot de passe pour le compte root :
+Définir un mot de passe pour le compte root :
 
 ```console
 $ passwd

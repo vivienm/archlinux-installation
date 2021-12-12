@@ -2,7 +2,7 @@
 
 ## Périphérique de démarrage
 
-Télécharger la [dernière image ISO d'Arch Linux](https://archlinux.org/download/) et la graver sur une clé USB :
+Télécharger la [dernière image ISO d'Arch Linux](https://archlinux.org/download/) et la graver sur une clé USB :
 
 ```console
 $ dd if=archlinux-x86_64.iso of=/dev/$DEVICE
@@ -14,11 +14,13 @@ Cela se fait typiquement via le menu de démarrage (généralement accessible de
 
 ## Réglage du clavier
 
-Passer le clavier en AZERTY :
+Passer le clavier en AZERTY :
 
 ```console
-$ loadkeys fr-pc  # Taper : loqdkeys fr)pc
+$ loadkeys fr-pc
 ```
+
+(Taper `loqdkeys fr)pc`.)
 
 ## Vérification du mode de démarrage
 
@@ -67,7 +69,7 @@ $ ping archlinux.org
 ## Serveur SSH
 
 Si l'on dispose d'un autre ordinateur, il peut être plus confortable d'effectuer l'essentiel de l'installation en SSH.
-Il faut pour cela définir un mot de passe pour le compte `root` et démarrer le service `sshd` :
+Il faut pour cela définir un mot de passe pour le compte `root` et démarrer le service `sshd` :
 
 ```console
 $ passwd root
@@ -135,7 +137,7 @@ $ mkfs.fat -F32 -n ESP /dev/$EFI_PARTITION
 
 ### Boot
 
-Créer la partition de boot :
+Créer la partition de boot :
 
 ```console
 $ gdisk $DEVICE
@@ -198,7 +200,7 @@ $ mkfs.ext4 -L ARCH_ROOT /dev/mapper/arch-root
 
 ## Montage des systèmes de fichier
 
-Monter la hiérarchie nouvellement créée sur `/mnt` :
+Monter la hiérarchie nouvellement créée sur `/mnt` :
 
 ```console
 $ mount /dev/mapper/arch-root /mnt
