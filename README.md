@@ -10,3 +10,4 @@ La procédure d'installation décrite ici a les caractéristiques suivantes :
 * La disposition clavier est en AZERTY.
 * Il n'y a pas de partition swap, l'hibernation est impossible.
 * mkinitcpio utilise des crochets systemd.
+* La configuration réseau est gérée par systemd-networkd et systemd-resolved.
