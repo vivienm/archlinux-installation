@@ -1,4 +1,11 @@
 site_name: Guide d'installation Arch Linux
+site_url: https://vivienm.github.io/install-arch/
+site_author: Vivien Maisonneuve
+
+copyright: Vivien Maisonneuve
+
+repo_url: https://github.com/vivienm/install-arch
+repo_name: vivienm/install-arch
 
 nav:
 - Accueil: index.md
@@ -13,12 +20,6 @@ nav:
   - postinstallation/optimization.md
   - postinstallation/services.md
   - postinstallation/gui.md
-
-markdown_extensions:
-- toc:
-    permalink: true
-- pymdownx.highlight
-- pymdownx.superfences
 
 theme:
   name: material
@@ -38,3 +39,16 @@ theme:
   - navigation.tabs
   - toc.integrate
   language: fr
+
+extra:
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/vivienm
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/vmaisonneuve/
+
+markdown_extensions:
+- toc:
+    permalink: true
+- pymdownx.highlight
+- pymdownx.superfences
