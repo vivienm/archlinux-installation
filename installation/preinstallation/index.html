@@ -451,8 +451,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#boot" class="md-nav__link">
-    Boot
+  <a href="#demarrage" class="md-nav__link">
+    Démarrage
   </a>
   
 </li>
@@ -686,7 +686,7 @@ Cela se fait typiquement via le menu de démarrage (généralement accessible de
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>iwctl station <span class="nv">$DEVICE</span> connect <span class="nv">$SSID</span>
 </code></pre></div>
 <h3 id="verification">Vérification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h3>
-<p>Vérifier que la connextion internet fonctionne :</p>
+<p>Vérifier que la connexion internet fonctionne :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>ping archlinux.org
 </code></pre></div>
 <h2 id="serveur-ssh">Serveur SSH<a class="headerlink" href="#serveur-ssh" title="Permanent link">&para;</a></h2>
@@ -728,11 +728,11 @@ Il faut pour cela définir un mot de passe pour le compte <code>root</code> et d
 
 <span class="go">Command (? for help): w</span>
 </code></pre></div>
-<p>La formatter en FAT 32 :</p>
+<p>La formater en FAT 32 :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mkfs.fat -F32 -n ESP /dev/<span class="nv">$EFI_PARTITION</span>
 </code></pre></div>
-<h3 id="boot">Boot<a class="headerlink" href="#boot" title="Permanent link">&para;</a></h3>
-<p>Créer la partition de boot :</p>
+<h3 id="demarrage">Démarrage<a class="headerlink" href="#demarrage" title="Permanent link">&para;</a></h3>
+<p>Créer la partition de démarrage :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>gdisk <span class="nv">$DEVICE</span>
 <span class="go">Command (? for help): n</span>
 <span class="go">Partition Number: &lt;default&gt;</span>
@@ -742,7 +742,7 @@ Il faut pour cela définir un mot de passe pour le compte <code>root</code> et d
 
 <span class="go">Command (? for help): w</span>
 </code></pre></div>
-<p>La formatter en FAT 32 :</p>
+<p>La formater en FAT 32 :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mkfs.fat -F32 -n BOOT /dev/<span class="nv">$BOOT_PARTITION</span>
 </code></pre></div>
 <h3 id="systeme">Système<a class="headerlink" href="#systeme" title="Permanent link">&para;</a></h3>
@@ -768,7 +768,7 @@ Il faut pour cela définir un mot de passe pour le compte <code>root</code> et d
 Laisser un peu d'espace disponible pour pouvoir ultérieurement créer des snapshots.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>lvcreate -L 200G -n root arch
 </code></pre></div>
-<p>Formatter le sous-volume au format ext4 :</p>
+<p>Formater le sous-volume au format ext4 :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mkfs.ext4 -L ARCH_ROOT /dev/mapper/arch-root
 </code></pre></div>
 <h2 id="montage-des-systemes-de-fichier">Montage des systèmes de fichier<a class="headerlink" href="#montage-des-systemes-de-fichier" title="Permanent link">&para;</a></h2>

@@ -684,7 +684,7 @@ Générer ensuite les locales :</p>
 <p>Installer le gestionnaire de démarrage :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>bootctl --esp-path<span class="o">=</span>/efi --boot-path<span class="o">=</span>/boot install
 </code></pre></div>
-<p>Installer également un hook Pacman pour le mettre à jour automatiquement : créer le répertoire <code>/etc/pacman.d/hooks</code> puis le fichier <code>/etc/pacman.d/hooks/100-systemd-boot.hook</code> avec pour contenu</p>
+<p>Installer également un crochet Pacman pour le mettre à jour automatiquement : créer le répertoire <code>/etc/pacman.d/hooks</code> puis le fichier <code>/etc/pacman.d/hooks/100-systemd-boot.hook</code> avec pour contenu</p>
 <div class="highlight"><pre><span></span><code><span class="k">[Trigger]</span>
 <span class="na">Type</span> <span class="o">=</span> <span class="s">Package</span>
 <span class="na">Operation</span> <span class="o">=</span> <span class="s">Upgrade</span>
