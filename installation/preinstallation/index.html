@@ -624,16 +624,17 @@
 
 <h1 id="pre-installation">Pré-installation<a class="headerlink" href="#pre-installation" title="Permanent link">&para;</a></h1>
 <h2 id="peripherique-de-demarrage">Périphérique de démarrage<a class="headerlink" href="#peripherique-de-demarrage" title="Permanent link">&para;</a></h2>
-<p>Télécharger la <a href="https://archlinux.org/download/">dernière image ISO d'Arch Linux</a> et la graver sur une clé USB :</p>
+<p>Télécharger la <a href="https://archlinux.org/download/">dernière image ISO d'Arch Linux</a> et la graver sur une clé USB :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>dd <span class="k">if</span><span class="o">=</span>archlinux-x86_64.iso <span class="nv">of</span><span class="o">=</span>/dev/<span class="nv">$DEVICE</span>
 <span class="gp">$ </span>sync
 </code></pre></div>
 <p>Insérer la clé USB dans l'ordinateur et démarrer dessus.
 Cela se fait typiquement via le menu de démarrage (généralement accessible depuis l'écran de démarrage en appuyant sur la touche <code>F10</code>, <code>F12</code> ou <code>Esc</code>) ou depuis l'écran de configuration du BIOS (généralement accessible en appuyant sur la touche <code>F2</code>).</p>
 <h2 id="reglage-du-clavier">Réglage du clavier<a class="headerlink" href="#reglage-du-clavier" title="Permanent link">&para;</a></h2>
-<p>Passer le clavier en AZERTY :</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>loadkeys fr-pc  <span class="c1"># Taper : loqdkeys fr)pc</span>
+<p>Passer le clavier en AZERTY :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>loadkeys fr-pc
 </code></pre></div>
+<p>(Taper <code>loqdkeys fr)pc</code>.)</p>
 <h2 id="verification-du-mode-de-demarrage">Vérification du mode de démarrage<a class="headerlink" href="#verification-du-mode-de-demarrage" title="Permanent link">&para;</a></h2>
 <p>Vérifier que le PC est bien démarré en mode UEFI :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls /sys/firmware/efi/efivars
@@ -658,7 +659,7 @@ Cela se fait typiquement via le menu de démarrage (généralement accessible de
 </code></pre></div>
 <h2 id="serveur-ssh">Serveur SSH<a class="headerlink" href="#serveur-ssh" title="Permanent link">&para;</a></h2>
 <p>Si l'on dispose d'un autre ordinateur, il peut être plus confortable d'effectuer l'essentiel de l'installation en SSH.
-Il faut pour cela définir un mot de passe pour le compte <code>root</code> et démarrer le service <code>sshd</code> :</p>
+Il faut pour cela définir un mot de passe pour le compte <code>root</code> et démarrer le service <code>sshd</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>passwd root
 <span class="gp">$ </span>systemctl start sshd.service
 </code></pre></div>
@@ -699,7 +700,7 @@ Il faut pour cela définir un mot de passe pour le compte <code>root</code> et d
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mkfs.fat -F32 -n ESP /dev/<span class="nv">$EFI_PARTITION</span>
 </code></pre></div>
 <h3 id="boot">Boot<a class="headerlink" href="#boot" title="Permanent link">&para;</a></h3>
-<p>Créer la partition de boot :</p>
+<p>Créer la partition de boot :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>gdisk <span class="nv">$DEVICE</span>
 <span class="go">Command (? for help): n</span>
 <span class="go">Partition Number: &lt;default&gt;</span>
@@ -739,7 +740,7 @@ Laisser un peu d'espace disponible pour pouvoir ultérieurement créer des snaps
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mkfs.ext4 -L ARCH_ROOT /dev/mapper/arch-root
 </code></pre></div>
 <h2 id="montage-des-systemes-de-fichier">Montage des systèmes de fichier<a class="headerlink" href="#montage-des-systemes-de-fichier" title="Permanent link">&para;</a></h2>
-<p>Monter la hiérarchie nouvellement créée sur <code>/mnt</code> :</p>
+<p>Monter la hiérarchie nouvellement créée sur <code>/mnt</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mount /dev/mapper/arch-root /mnt
 <span class="gp">$ </span>mkdir /mnt/boot /mnt/efi
 <span class="gp">$ </span>mount <span class="nv">$BOOT_DEVICE</span> /mnt/boot
