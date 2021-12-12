@@ -609,6 +609,13 @@
 <p>Installer Sway et un ensemble de programmes utiles sous Wayland :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman -S sway swaylock swayidle alacritty kanshi wofi mako grim slurp gammastep waybar otf-font-awesome xdg-desktop-portal-wlr xorg-xwayland
 </code></pre></div>
+<p>Pour passer le clavier en AZERTY, ajouter l'entrée suivante dans <code>~/.config/sway/config</code> :</p>
+<div class="highlight"><pre><span></span><code>input &quot;type:keyboard&quot; {
+    xkb_layout &quot;fr&quot;
+    xkb_variant &quot;oss&quot;
+    xkb_numlock &quot;enabled&quot;
+}
+</code></pre></div>
 
               
             </article>
