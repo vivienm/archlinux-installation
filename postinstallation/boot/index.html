@@ -523,10 +523,10 @@
 <p>Démarrer l'ordinateur et se connecter avec le compte <code>root</code>.</p>
 <h2 id="connexion-internet">Connexion internet<a class="headerlink" href="#connexion-internet" title="Permanent link">&para;</a></h2>
 <p>Démarrer les services réseau :</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>systemctl start systemd-networkd.service systemd-resolved.service
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>systemctl <span class="nb">enable</span> --now systemd-networkd.service systemd-resolved.service
 </code></pre></div>
 <p>Si l'ordinateur ne dispose pas d'une liaison Ethernet, démarrer également le service <code>iwd</code> :</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>systemctl start iwd.service
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>systemctl <span class="nb">enable</span> --now iwd.service
 </code></pre></div>
 <p>Suivre ensuite <a href="../../installation/preinstallation/#connexion-internet">les instructions indiquées précédemment</a> pour établir une connexion réseau.</p>
 
