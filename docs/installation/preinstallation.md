@@ -60,7 +60,7 @@ $ iwctl station $DEVICE connect $SSID
 
 ### Vérification
 
-Vérifier que la connextion internet fonctionne :
+Vérifier que la connexion internet fonctionne :
 
 ```console
 $ ping archlinux.org
@@ -129,15 +129,15 @@ Hex Code: ef00
 Command (? for help): w
 ```
 
-La formatter en FAT 32 :
+La formater en FAT 32 :
 
 ```console
 $ mkfs.fat -F32 -n ESP /dev/$EFI_PARTITION
 ```
 
-### Boot
+### Démarrage
 
-Créer la partition de boot :
+Créer la partition de démarrage :
 
 ```console
 $ gdisk $DEVICE
@@ -150,7 +150,7 @@ Hex Code: ea00
 Command (? for help): w
 ```
 
-La formatter en FAT 32 :
+La formater en FAT 32 :
 
 ```console
 $ mkfs.fat -F32 -n BOOT /dev/$BOOT_PARTITION
@@ -192,7 +192,7 @@ Laisser un peu d'espace disponible pour pouvoir ultérieurement créer des snaps
 $ lvcreate -L 200G -n root arch
 ```
 
-Formatter le sous-volume au format ext4 :
+Formater le sous-volume au format ext4 :
 
 ```console
 $ mkfs.ext4 -L ARCH_ROOT /dev/mapper/arch-root

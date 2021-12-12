@@ -16,7 +16,7 @@ $ systemctl enable fstrim.timer
 
 ## TLP
 
-Sur laptop, installer TLP pour optimiser la durée de vie de la batterie :
+Sur ordinateur portable, installer TLP pour optimiser la durée de vie de la batterie :
 
 ```console
 $ pacman -S tlp

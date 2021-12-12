@@ -124,7 +124,7 @@ Installer le gestionnaire de démarrage :
 $ bootctl --esp-path=/efi --boot-path=/boot install
 ```
 
-Installer également un hook Pacman pour le mettre à jour automatiquement : créer le répertoire `/etc/pacman.d/hooks` puis le fichier `/etc/pacman.d/hooks/100-systemd-boot.hook` avec pour contenu
+Installer également un crochet Pacman pour le mettre à jour automatiquement : créer le répertoire `/etc/pacman.d/hooks` puis le fichier `/etc/pacman.d/hooks/100-systemd-boot.hook` avec pour contenu
 
 ```ini
 [Trigger]
