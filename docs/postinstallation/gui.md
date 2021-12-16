@@ -43,13 +43,7 @@ $ grep -v 'OnlyShowIn=X-Cinnamon;' /usr/share/applications/nemo-autostart.deskto
 Installer Wayland :
 
 ```console
-$ pacman -S wayland wl-clipboard wireplumber
-```
-
-Installer PulseAudio :
-
-```console
-$ pacman -S pulseaudio
+$ pacman -S wayland wl-clipboard wireplumber pipewire-pulse
 ```
 
 Installer Sway et un ensemble de programmes utiles sous Wayland :
