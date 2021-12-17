@@ -7,6 +7,11 @@ Installer et démarrer Docker :
 ```console
 $ pacman -S docker
 $ systemctl enable --now docker.service
+```
+
+Ajouter éventuellement l'administrateur au groupe `docker` :
+
+```console
 $ usermod -aG docker vivien
 ```
 
