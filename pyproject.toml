@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "install-arch"
+name = "archlinux-installation"
 version = "0.1.0"
 description = ""
 authors = ["Vivien Maisonneuve"]

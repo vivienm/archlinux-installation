@@ -1,4 +1,4 @@
-# [Guide d'installation Arch Linux](https://vivienm.github.io/install-arch/)
+# [Guide d'installation Arch Linux](https://vivienm.github.io/archlinux-installation/)
 
 Ce document décrit les différentes étapes nécessaires à l'installation d'Arch Linux sur un ordinateur personnel.
 

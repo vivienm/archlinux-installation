@@ -1,11 +1,11 @@
 site_name: Guide d'installation Arch Linux
-site_url: https://vivienm.github.io/install-arch/
+site_url: https://vivienm.github.io/archlinux-installation/
 site_author: Vivien Maisonneuve
 
 copyright: Vivien Maisonneuve
 
-repo_url: https://github.com/vivienm/install-arch
-repo_name: vivienm/install-arch
+repo_url: https://github.com/vivienm/archlinux-installation
+repo_name: vivienm/archlinux-installation
 
 nav:
 - Accueil: index.md
