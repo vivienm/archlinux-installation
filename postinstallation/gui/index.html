@@ -528,6 +528,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#networkmanager" class="md-nav__link">
+    NetworkManager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#nemo" class="md-nav__link">
     Nemo
   </a>
@@ -588,6 +595,13 @@
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman -S gnome
 <span class="gp">$ </span>localectl set-x11-keymap fr oss
 <span class="gp">$ </span>systemctl <span class="nb">enable</span> --now gdm.service
+</code></pre></div>
+<h3 id="networkmanager">NetworkManager<a class="headerlink" href="#networkmanager" title="Permanent link">&para;</a></h3>
+<p>Contrairement à systemd-networkd, NetworkManager bénéficie d'une intégration native dans GNOME.
+Pour l'installer :</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>pacman -S networkmanager
+<span class="gp">$ </span>systemctl disable --now systemd-networkd.service systemd-networkd.socket iwd.service
+<span class="gp">$ </span>systemctl <span class="nb">enable</span> --now NetworkManager.service
 </code></pre></div>
 <h3 id="nemo">Nemo<a class="headerlink" href="#nemo" title="Permanent link">&para;</a></h3>
 <p>Installer Nemo :</p>
