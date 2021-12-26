@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/installation/configuration/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/installation/installation/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/installation/preinstallation/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/installation/reboot/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/postinstallation/adminsys/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/postinstallation/boot/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/postinstallation/gui/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/postinstallation/optimization/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://vivienm.github.io/archlinux-installation/postinstallation/services/</loc>
-         <lastmod>2021-12-20</lastmod>
+         <lastmod>2021-12-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

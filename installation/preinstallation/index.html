@@ -713,8 +713,17 @@ Il faut pour cela définir un mot de passe pour le compte <code>root</code> et d
 <p>Dans le cas contraire, effacer la table des partitions (attention, toutes les données seront perdues !) et la recréer :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>gdisk <span class="nv">$DEVICE</span>
 <span class="go">Command (? for help): o</span>
+<span class="go">This option deletes all partitions and creates a new protective MBR.</span>
+<span class="go">Proceed? (Y/N): Y</span>
 
 <span class="go">Command (? for help): w</span>
+
+<span class="go">Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING</span>
+<span class="go">PARTITIONS!!</span>
+
+<span class="go">Do you want to proceed? (Y/N): Y</span>
+<span class="go">OK; writing new GUID partition table (GPT) to $DEVICE</span>
+<span class="go">The operation has completed successfully.</span>
 </code></pre></div>
 <h3 id="efi">EFI<a class="headerlink" href="#efi" title="Permanent link">&para;</a></h3>
 <p>S'assurer que la périphérique dispose d'une partition EFI.</p>
@@ -727,6 +736,13 @@ Il faut pour cela définir un mot de passe pour le compte <code>root</code> et d
 <span class="go">Hex Code: ef00</span>
 
 <span class="go">Command (? for help): w</span>
+
+<span class="go">Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING</span>
+<span class="go">PARTITIONS!!</span>
+
+<span class="go">Do you want to proceed? (Y/N): Y</span>
+<span class="go">OK; writing new GUID partition table (GPT) to $DEVICE</span>
+<span class="go">The operation has completed successfully.</span>
 </code></pre></div>
 <p>La formater en FAT 32 :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mkfs.fat -F32 -n ESP /dev/<span class="nv">$EFI_PARTITION</span>
@@ -741,6 +757,13 @@ Il faut pour cela définir un mot de passe pour le compte <code>root</code> et d
 <span class="go">Hex Code: ea00</span>
 
 <span class="go">Command (? for help): w</span>
+
+<span class="go">Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING</span>
+<span class="go">PARTITIONS!!</span>
+
+<span class="go">Do you want to proceed? (Y/N): Y</span>
+<span class="go">OK; writing new GUID partition table (GPT) to $DEVICE</span>
+<span class="go">The operation has completed successfully.</span>
 </code></pre></div>
 <p>La formater en FAT 32 :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mkfs.fat -F32 -n BOOT /dev/<span class="nv">$BOOT_PARTITION</span>
@@ -755,6 +778,13 @@ Il faut pour cela définir un mot de passe pour le compte <code>root</code> et d
 <span class="go">Hex Code: &lt;default&gt;</span>
 
 <span class="go">Command (? for help): w</span>
+
+<span class="go">Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING</span>
+<span class="go">PARTITIONS!!</span>
+
+<span class="go">Do you want to proceed? (Y/N): Y</span>
+<span class="go">OK; writing new GUID partition table (GPT) to $DEVICE</span>
+<span class="go">The operation has completed successfully.</span>
 </code></pre></div>
 <p>La chiffrer avec dm-crypt :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>cryptsetup -y luksFormat --label ARCH <span class="nv">$ARCH_DEVICE</span>
@@ -775,8 +805,8 @@ Laisser un peu d'espace disponible pour pouvoir ultérieurement créer des snaps
 <p>Monter la hiérarchie nouvellement créée sur <code>/mnt</code> :</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>mount /dev/mapper/arch-root /mnt
 <span class="gp">$ </span>mkdir /mnt/boot /mnt/efi
-<span class="gp">$ </span>mount <span class="nv">$BOOT_DEVICE</span> /mnt/boot
 <span class="gp">$ </span>mount <span class="nv">$EFI_DEVICE</span> /mnt/efi
+<span class="gp">$ </span>mount <span class="nv">$BOOT_DEVICE</span> /mnt/boot
 </code></pre></div>
 
               
