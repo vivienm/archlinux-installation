@@ -108,8 +108,17 @@ Dans le cas contraire, effacer la table des partitions (attention, toutes les do
 ```console
 $ gdisk $DEVICE
 Command (? for help): o
+This option deletes all partitions and creates a new protective MBR.
+Proceed? (Y/N): Y
 
 Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): Y
+OK; writing new GUID partition table (GPT) to $DEVICE
+The operation has completed successfully.
 ```
 
 ### EFI
@@ -127,6 +136,13 @@ Last sector: +256M
 Hex Code: ef00
 
 Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): Y
+OK; writing new GUID partition table (GPT) to $DEVICE
+The operation has completed successfully.
 ```
 
 La formater en FAT 32 :
@@ -148,6 +164,13 @@ Last sector: +512M
 Hex Code: ea00
 
 Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): Y
+OK; writing new GUID partition table (GPT) to $DEVICE
+The operation has completed successfully.
 ```
 
 La formater en FAT 32 :
@@ -169,6 +192,13 @@ Last sector: <default>
 Hex Code: <default>
 
 Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): Y
+OK; writing new GUID partition table (GPT) to $DEVICE
+The operation has completed successfully.
 ```
 
 La chiffrer avec dm-crypt :
@@ -205,6 +235,6 @@ Monter la hiérarchie nouvellement créée sur `/mnt` :
 ```console
 $ mount /dev/mapper/arch-root /mnt
 $ mkdir /mnt/boot /mnt/efi
-$ mount $BOOT_DEVICE /mnt/boot
 $ mount $EFI_DEVICE /mnt/efi
+$ mount $BOOT_DEVICE /mnt/boot
 ```
