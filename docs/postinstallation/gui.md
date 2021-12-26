@@ -18,6 +18,17 @@ $ localectl set-x11-keymap fr oss
 $ systemctl enable --now gdm.service
 ```
 
+### NetworkManager
+
+Contrairement à systemd-networkd, NetworkManager bénéficie d'une intégration native dans GNOME.
+Pour l'installer :
+
+```console
+$ pacman -S networkmanager
+$ systemctl disable --now systemd-networkd.service systemd-networkd.socket iwd.service
+$ systemctl enable --now NetworkManager.service
+```
+
 ### Nemo
 
 Installer Nemo :
