@@ -14,6 +14,7 @@ Installer GNOME :
 
 ```console
 $ pacman -S gnome
+$ localectl set-x11-keymap fr oss
 $ systemctl enable --now gdm.service
 ```
 
